@@ -1,39 +1,25 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Executar C++ no macOS",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "setupCommands": [
         {
-            "name": "Compilar e Depurar Arquivo Ativo",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}${platformExecutableExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "preLaunchTask": "Compilar Arquivo Ativo",
-            "windows": {
-                "MIMode": "gdb",
-                "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
-                "setupCommands": [
-                    {
-                        "description": "Habilitar impressão avançada para gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    }
-                ]
-            },
-            "osx": {
-                "MIMode": "lldb",
-                "miDebuggerPath": "/usr/bin/lldb",
-                "setupCommands": [
-                    {
-                        "description": "Habilitar impressão avançada para lldb",
-                        "text": "settings set target.debug-without-process-attach true",
-                        "ignoreFailures": true
-                    }
-                ]
-            }
+          "description": "Habilitar impressão de formato para LLDB",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         }
-    ]
+      ],
+      "miDebuggerPath": "/usr/bin/lldb"
+    }
+  ]
 }

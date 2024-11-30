@@ -19,7 +19,7 @@ int main()
 
   soma = num1 + num2;
   diferenca = num1 - num2;
-  quociente = num1 / num2;
+  quociente = static_cast<double>(num1) / num2;
 
   cout << "A soma é " << soma << endl;
   cout << "A diferença é " << diferenca << endl;
