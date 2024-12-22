@@ -16,8 +16,6 @@ int main() {
     cout << "a: " << &*a << endl;
     cout << "a: " << *&a << endl;
 
-    
-
     char string[] = "caracteres e é $32,98";
     cout << "O string antes da conversão é: " << string << endl;
     convertToUppercase(string);
